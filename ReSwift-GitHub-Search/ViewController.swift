@@ -7,35 +7,46 @@
 //
 
 import UIKit
-import APIKit
+import ReSwift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StoreSubscriber {
     @IBOutlet weak var textView: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var validateLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
+    
+    let store = Store<AppState>(reducer: GitHubAPIReducer(), state: AppState())
+    var gitHubApiActionCreator: GitHubAPIActionCreater!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        gitHubApiActionCreator = GitHubAPIActionCreater(store: store)
         title = "GitHub Repository Search"
-        
-//        let request = SearchRepositoriesRequest(query: "Swift")
-//        Session.sendRequest(request) { result in
-//            switch result {
-//            case .Success(let respose):
-//                print(respose)
-//                
-//            case .Failure(let error):
-//                print(error)
-//            }
-//        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        store.subscribe(self)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        store.unsubscribe(self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    func newState(state: AppState) {
+        print("---newState")
+        print(state)
+    }
 
     @IBAction func searchAction(sender: AnyObject) {
+        gitHubApiActionCreator.searchRepository(textView.text!)
     }
 
 }
