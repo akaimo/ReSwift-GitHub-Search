@@ -18,6 +18,9 @@
 		A2474A2D1CC33CD3005F200D /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2474A291CC33CD3005F200D /* Himotoki.framework */; };
 		A2474A2E1CC33CD3005F200D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2474A2A1CC33CD3005F200D /* Result.framework */; };
 		A2474A2F1CC33CD3005F200D /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2474A2B1CC33CD3005F200D /* ReSwift.framework */; };
+		A2474A331CC33DFD005F200D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2474A321CC33DFD005F200D /* Repository.swift */; };
+		A2474A361CC33E23005F200D /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2474A351CC33E23005F200D /* GitHubAPI.swift */; };
+		A2474A391CC33E5A005F200D /* SearchRepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2474A381CC33E5A005F200D /* SearchRepositoryRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		A2474A291CC33CD3005F200D /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		A2474A2A1CC33CD3005F200D /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		A2474A2B1CC33CD3005F200D /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		A2474A321CC33DFD005F200D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		A2474A351CC33E23005F200D /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		A2474A381CC33E5A005F200D /* SearchRepositoryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepositoryRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				A24749F91CC33B49005F200D /* AppDelegate.swift */,
-				A24749FB1CC33B49005F200D /* ViewController.swift */,
+				A2474A371CC33E2E005F200D /* Request */,
+				A2474A341CC33E05005F200D /* Model */,
+				A2474A311CC33DC3005F200D /* ViewController */,
 				A24749FD1CC33B49005F200D /* Main.storyboard */,
 				A2474A001CC33B49005F200D /* Assets.xcassets */,
 				A2474A021CC33B49005F200D /* LaunchScreen.storyboard */,
@@ -147,6 +155,31 @@
 				A2474A2B1CC33CD3005F200D /* ReSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2474A311CC33DC3005F200D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A24749FB1CC33B49005F200D /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		A2474A341CC33E05005F200D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2474A321CC33DFD005F200D /* Repository.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A2474A371CC33E2E005F200D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A2474A351CC33E23005F200D /* GitHubAPI.swift */,
+				A2474A381CC33E5A005F200D /* SearchRepositoryRequest.swift */,
+			);
+			name = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +336,9 @@
 			files = (
 				A24749FC1CC33B49005F200D /* ViewController.swift in Sources */,
 				A24749FA1CC33B49005F200D /* AppDelegate.swift in Sources */,
+				A2474A331CC33DFD005F200D /* Repository.swift in Sources */,
+				A2474A361CC33E23005F200D /* GitHubAPI.swift in Sources */,
+				A2474A391CC33E5A005F200D /* SearchRepositoryRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
