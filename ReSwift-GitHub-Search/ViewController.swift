@@ -10,26 +10,33 @@ import UIKit
 import APIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var textView: UITextField!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var validateLabel: UILabel!
+    @IBOutlet weak var searchButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "GitHub Repository Search"
         
-        let request = SearchRepositoriesRequest(query: "Swift")
-        Session.sendRequest(request) { result in
-            switch result {
-            case .Success(let respose):
-                print(respose)
-                
-            case .Failure(let error):
-                print(error)
-            }
-        }
+//        let request = SearchRepositoriesRequest(query: "Swift")
+//        Session.sendRequest(request) { result in
+//            switch result {
+//            case .Success(let respose):
+//                print(respose)
+//                
+//            case .Failure(let error):
+//                print(error)
+//            }
+//        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func searchAction(sender: AnyObject) {
+    }
 
 }
 

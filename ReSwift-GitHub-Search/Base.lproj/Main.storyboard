@@ -1,25 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JIl-9m-Mk2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReSwift_GitHub_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="295-T3-KZS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xH-aM-WgI">
+                                <rect key="frame" x="20" y="114" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="検索ワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmT-3R-7kC">
+                                <rect key="frame" x="20" y="86" width="80" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3文字以上入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-LD-Od1">
+                                <rect key="frame" x="20" y="152" width="177" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSg-kU-zM2">
+                                <rect key="frame" x="285" y="219" width="30" height="30"/>
+                                <state key="normal" title="検索"/>
+                                <connections>
+                                    <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqs-7n-02O"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cmT-3R-7kC" firstAttribute="leading" secondItem="295-T3-KZS" secondAttribute="leading" constant="20" id="6PH-0Q-Zsx"/>
+                            <constraint firstAttribute="trailing" secondItem="5xH-aM-WgI" secondAttribute="trailing" constant="20" id="CwI-Jx-sVV"/>
+                            <constraint firstItem="HSg-kU-zM2" firstAttribute="top" secondItem="5xH-aM-WgI" secondAttribute="bottom" constant="75" id="Gaz-of-TMR"/>
+                            <constraint firstItem="HSg-kU-zM2" firstAttribute="centerX" secondItem="295-T3-KZS" secondAttribute="centerX" id="HZY-Td-ewL"/>
+                            <constraint firstItem="bYV-LD-Od1" firstAttribute="leading" secondItem="295-T3-KZS" secondAttribute="leading" constant="20" id="TVw-H5-cza"/>
+                            <constraint firstItem="5xH-aM-WgI" firstAttribute="top" secondItem="cmT-3R-7kC" secondAttribute="bottom" constant="8" id="Xwi-Nj-KTE"/>
+                            <constraint firstItem="5xH-aM-WgI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="aYl-XA-8Ek"/>
+                            <constraint firstItem="bYV-LD-Od1" firstAttribute="top" secondItem="5xH-aM-WgI" secondAttribute="bottom" constant="8" id="bwY-o0-N6e"/>
+                            <constraint firstItem="5xH-aM-WgI" firstAttribute="leading" secondItem="295-T3-KZS" secondAttribute="leading" constant="20" id="lIR-vD-ufo"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PfP-Az-AfT"/>
+                    <connections>
+                        <outlet property="searchButton" destination="HSg-kU-zM2" id="NuD-wk-Ob7"/>
+                        <outlet property="textView" destination="5xH-aM-WgI" id="CQb-jI-DOs"/>
+                        <outlet property="titleLabel" destination="cmT-3R-7kC" id="buK-2G-XmX"/>
+                        <outlet property="validateLabel" destination="bYV-LD-Od1" id="Qcc-oG-ukS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1267" y="311"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="75O-dF-jCZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JIl-9m-Mk2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p4y-0z-tZS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rSj-uL-dxD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgd-P8-Wi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="311"/>
         </scene>
     </scenes>
 </document>
