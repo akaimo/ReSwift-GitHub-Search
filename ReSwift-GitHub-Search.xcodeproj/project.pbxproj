@@ -14,6 +14,10 @@
 		A2474A041CC33B49005F200D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2474A021CC33B49005F200D /* LaunchScreen.storyboard */; };
 		A2474A0F1CC33B49005F200D /* ReSwift_GitHub_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2474A0E1CC33B49005F200D /* ReSwift_GitHub_SearchTests.swift */; };
 		A2474A1A1CC33B49005F200D /* ReSwift_GitHub_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2474A191CC33B49005F200D /* ReSwift_GitHub_SearchUITests.swift */; };
+		A2474A2C1CC33CD3005F200D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2474A281CC33CD3005F200D /* APIKit.framework */; };
+		A2474A2D1CC33CD3005F200D /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2474A291CC33CD3005F200D /* Himotoki.framework */; };
+		A2474A2E1CC33CD3005F200D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2474A2A1CC33CD3005F200D /* Result.framework */; };
+		A2474A2F1CC33CD3005F200D /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2474A2B1CC33CD3005F200D /* ReSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		A2474A151CC33B49005F200D /* ReSwift-GitHub-SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReSwift-GitHub-SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2474A191CC33B49005F200D /* ReSwift_GitHub_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReSwift_GitHub_SearchUITests.swift; sourceTree = "<group>"; };
 		A2474A1B1CC33B49005F200D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2474A281CC33CD3005F200D /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		A2474A291CC33CD3005F200D /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
+		A2474A2A1CC33CD3005F200D /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		A2474A2B1CC33CD3005F200D /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2474A2C1CC33CD3005F200D /* APIKit.framework in Frameworks */,
+				A2474A2D1CC33CD3005F200D /* Himotoki.framework in Frameworks */,
+				A2474A2E1CC33CD3005F200D /* Result.framework in Frameworks */,
+				A2474A2F1CC33CD3005F200D /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +89,7 @@
 		A24749ED1CC33B49005F200D = {
 			isa = PBXGroup;
 			children = (
+				A2474A301CC33CF9005F200D /* Frameworks */,
 				A24749F81CC33B49005F200D /* ReSwift-GitHub-Search */,
 				A2474A0D1CC33B49005F200D /* ReSwift-GitHub-SearchTests */,
 				A2474A181CC33B49005F200D /* ReSwift-GitHub-SearchUITests */,
@@ -125,6 +138,17 @@
 			path = "ReSwift-GitHub-SearchUITests";
 			sourceTree = "<group>";
 		};
+		A2474A301CC33CF9005F200D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2474A281CC33CD3005F200D /* APIKit.framework */,
+				A2474A291CC33CD3005F200D /* Himotoki.framework */,
+				A2474A2A1CC33CD3005F200D /* Result.framework */,
+				A2474A2B1CC33CD3005F200D /* ReSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +159,7 @@
 				A24749F21CC33B49005F200D /* Sources */,
 				A24749F31CC33B49005F200D /* Frameworks */,
 				A24749F41CC33B49005F200D /* Resources */,
+				A2474A271CC33C96005F200D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +275,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2474A271CC33C96005F200D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A24749F21CC33B49005F200D /* Sources */ = {
@@ -401,6 +446,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ReSwift-GitHub-Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SK.ReSwift-GitHub-Search";
@@ -412,6 +461,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ReSwift-GitHub-Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SK.ReSwift-GitHub-Search";
