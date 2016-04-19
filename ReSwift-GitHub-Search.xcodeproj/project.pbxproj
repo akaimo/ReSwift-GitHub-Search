@@ -26,6 +26,7 @@
 		A2474A541CC36294005F200D /* GitHubAPIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2474A531CC36294005F200D /* GitHubAPIState.swift */; };
 		A2474A561CC3641F005F200D /* GitHubAPIReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2474A551CC3641F005F200D /* GitHubAPIReducer.swift */; };
 		A2474A591CC38410005F200D /* GitHubAPIActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2474A581CC38410005F200D /* GitHubAPIActionCreator.swift */; };
+		A2474A5B1CC38D6C005F200D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2474A5A1CC38D6C005F200D /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		A2474A531CC36294005F200D /* GitHubAPIState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIState.swift; sourceTree = "<group>"; };
 		A2474A551CC3641F005F200D /* GitHubAPIReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIReducer.swift; sourceTree = "<group>"; };
 		A2474A581CC38410005F200D /* GitHubAPIActionCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIActionCreator.swift; sourceTree = "<group>"; };
+		A2474A5A1CC38D6C005F200D /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				A24749FB1CC33B49005F200D /* ViewController.swift */,
+				A2474A5A1CC38D6C005F200D /* ResultViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				A2474A541CC36294005F200D /* GitHubAPIState.swift in Sources */,
 				A2474A391CC33E5A005F200D /* SearchRepositoryRequest.swift in Sources */,
 				A2474A3B1CC3444A005F200D /* GitHubAPIActions.swift in Sources */,
+				A2474A5B1CC38D6C005F200D /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

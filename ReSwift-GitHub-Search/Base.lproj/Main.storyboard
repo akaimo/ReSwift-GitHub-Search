@@ -67,6 +67,39 @@
             </objects>
             <point key="canvasLocation" x="1267" y="311"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="WZj-tt-aR2">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="RSI-eS-Wt6" customClass="ResultViewController" customModule="ReSwift_GitHub_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B7x-j2-2dy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zmx-R5-cBj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yYu-A4-TBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V7x-Oq-2Xp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V7x-Oq-2Xp" firstAttribute="top" secondItem="yYu-A4-TBQ" secondAttribute="top" id="Kb5-kN-H9K"/>
+                            <constraint firstItem="V7x-Oq-2Xp" firstAttribute="leading" secondItem="yYu-A4-TBQ" secondAttribute="leading" id="mAU-bl-XXC"/>
+                            <constraint firstItem="Zmx-R5-cBj" firstAttribute="top" secondItem="V7x-Oq-2Xp" secondAttribute="bottom" id="sa3-1L-FaQ"/>
+                            <constraint firstAttribute="trailing" secondItem="V7x-Oq-2Xp" secondAttribute="trailing" id="yrx-LM-NAh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="V7x-Oq-2Xp" id="fET-PT-ncV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EE9-di-HQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023" y="311"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="75O-dF-jCZ">
             <objects>

@@ -43,6 +43,11 @@ class ViewController: UIViewController, StoreSubscriber {
     func newState(state: AppState) {
         print("---newState")
         print(state)
+        if let _ = state.gitHubAPIState.response {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController
+            vc.state = state
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     @IBAction func searchAction(sender: AnyObject) {
